@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <title>ANNA UNIVERSITY |CGPA CALCULATOR| SEM5 - CSE | REGULATION(2021)| KISHORE.G(creator) </title>
+
+    <style>
+      body{
+        padding-bottom: 40px;
+        background-color: white;
+      }
+      h3{
+        color: green;
+      }
+    </style>
+    <meta name="google-site-verification" content="K2ePsfaUIClXkmkqIa58xsYyZCOc1TmBIVKRKJJYvlE" />
+  </head>
+  <body>
+    <h1> SEMESTER 5 CGPA CALCULATOR[R-21]</h1>
+    <h3>BE COMPUTER SCIENCE AND ENGINEERING.</h3><br>
+
+  <h3>GPA OF SEM5 </h3>
+<h6>1.CS3591- COMPUTER NETWORKS<h6>
+    <select class="form-select"
+    aria-label="Default select example"
+    id="gradelist1"  onchange="selectedValue1()">
+      <option disabled selected value>select an option</option>
+      <option value="O">O</option>
+      <option value="A+">A+</option>
+      <option value="A">A</option>
+      <option value="B+">B+</option>
+      <option value="B">B</option>
+      <option value="C">C</option>
+    </select> <br>
+    
+    
+    <h6>2.CS3501-COMPILER DESIGN<h6>
+    <select class="form-select" aria-label="Default select example"
+    id="gradelist2"  onchange="selectedValue2()">
+      <option selected>select your grade</option>
+      <option value="O">O</option>
+      <option value="A+">A+</option>
+      <option value="A">A</option>
+      <option value="B+">B+</option>
+      <option value="B">B</option>
+      <option value="C">C</option>
+    </select>    <br>
+
+      <h6>3.CS3551-DISTRIBUTED COMPUTING</h6>
+    <select class="form-select" aria-label="Default select example"
+    id="gradelist3"  onchange="selectedValue3()">
+      <option selected>select your grade</option>
+      <option value="O">O</option>
+      <option value="A+">A+</option>
+      <option value="A">A</option>
+      <option value="B+">B+</option>
+      <option value="B">B</option>
+      <option value="C">C</option>
+    </select>    <br>
+
+    <h6>4.CB3491-CRYPTOGRAPHY AND CYBERSECURITY <h6>
+    <select class="form-select" aria-label="Default select example"
+    id="gradelist4"  onchange="selectedValue4()">
+      <option selected>select your grade</option>
+      <option value="O">O</option>
+      <option value="A+">A+</option>
+      <option value="A">A</option>
+      <option value="B+">B+</option>
+      <option value="B">B</option>
+      <option value="C">C</option>
+    </select>   <br>
+    
+    <h6>5.CCS341-DATA WAREHOUSING<h6>
+    <select class="form-select" aria-label="Default select example"
+    id="gradelist5"  onchange="selectedValue5()">
+      <option selected>select your grade</option>
+      <option value="O">O</option>
+      <option value="A+">A+</option>
+      <option value="A">A</option>
+      <option value="B+">B+</option>
+      <option value="B">B</option>
+      <option value="C">C</option>
+    </select>    <br>
+
+    <h6>6.CCS335-CLOUD COMPUTING</P>
+    <select class="form-select" aria-label="Default select example"
+    id="gradelist6"  onchange="selectedValue6()">
+      <option selected>select your grade</option>
+      <option value="O">O</option>
+      <option value="A+">A+</option>
+      <option value="A">A</option>
+      <option value="B+">B+</option>
+      <option value="B">B</option>
+      <option value="C">C</option>
+    </select>    <br>
+
+    
+     
+    
+    <button type="button" class="btn btn-secondary"
+      onclick="selectedValue1();
+               selectedValue2();
+               selectedValue3();
+               selectedValue4();
+               selectedValue5();
+               selectedValue6();
+               changeButton();"
+      >calculate GPA</button>
+    <button type="button" class="btn btn-success changeGpa">gpa</button> 
+
+
+
+      
+      <h2>CGPA CALCULATING</h2>
+      
+
+      <div class="input-group input-group-lg">
+        <span class="input-group-text" id="inputGroup-sizing-lg">GPA of sem1</span>
+        <input type="text"
+        class="form-control sem1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+      </div> <br>
+
+      <div class="input-group input-group-lg">
+        <span class="input-group-text" id="inputGroup-sizing-lg">GPA of sem2</span>
+        <input type="text" class="form-control sem2" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+      </div> <br>
+
+      <div class="input-group input-group-lg">
+        <span class="input-group-text" id="inputGroup-sizing-lg">GPA of sem3</span>
+        <input type="text" class="form-control sem3" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+      </div> <br>
+
+      <div class="input-group input-group-lg">
+        <span class="input-group-text" id="inputGroup-sizing-lg">GPA of sem4</span>
+        <input type="text" class="form-control sem4" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+      </div><br>
+
+      <div class="input-group input-group-lg">
+        <span class="input-group-text" id="inputGroup-sizing-lg">GPA of sem5</span>
+        <input type="text" class="form-control sem5" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+      </div><br>
+
+      <button type="button" class="btn btn-secondary"
+      onclick="cgpacalculator();">calculate CGPA</button>
+      <button type="button" class="btn btn-success changeCgpa">CGPA</button>
+
+
+     <script>
+      var grade1;
+      var grade2;
+      var grade3;
+      var grade4;
+      var grade5;
+      var grade6;
+      let stucredit = 0;
+      function selectedValue1() {
+      grade1 = document.getElementById("gradelist1").value;
+      gradePointConvertor(grade1);
+      creditCalculator(4);
+      stucredit = Newcredit;
+      
+      
+      } 
+      function selectedValue2(){
+        grade2 = document.getElementById("gradelist2").value;
+      gradePointConvertor(grade2);
+     creditCalculator(4);
+     stucredit = stucredit + Newcredit;
+      }
+      function selectedValue3(){
+        grade3 = document.getElementById("gradelist3").value;
+        gradePointConvertor(grade3);
+        creditCalculator(3);
+        stucredit = stucredit + Newcredit;
+        
+      }
+      function selectedValue4(){
+        grade4 = document.getElementById("gradelist4").value; 
+        gradePointConvertor(grade4);
+        creditCalculator(3);
+     stucredit = stucredit + Newcredit;
+     
+      }
+      function selectedValue5(){
+        grade5 = document.getElementById("gradelist5").value;
+        gradePointConvertor(grade5);
+        creditCalculator(3);
+     stucredit = stucredit + Newcredit;
+    }
+      function selectedValue6(){
+         grade6 = document.getElementById("gradelist6").value;
+         gradePointConvertor(grade6);
+         creditCalculator(3);
+         stucredit = stucredit + Newcredit;
+         gpaCalculator();
+        }
+      
+    
+    
+      let grade;
+      let gradePoint = 0;
+     function gradePointConvertor(grade){
+      if (grade === 'O'){
+        gradePoint = 10;
+      } else if(grade === 'A+'){
+        gradePoint = 9;
+      } else if(grade === 'A'){
+        gradePoint = 8;
+      } else if(grade === 'B+'){
+        gradePoint = 7;
+      }else if (grade === 'B'){
+        gradePoint = 6;
+      } else{
+        gradePoint = 5;
+      }
+     }
+     let Newcredit = 0;
+     function creditCalculator(credit){
+     Newcredit =  gradePoint * credit;
+     
+
+     }
+     let gpa = 0;
+      function gpaCalculator() {
+          gpa = stucredit / 20 ;
+          
+      }
+
+      function changeButton() {
+        document.querySelector('.changeGpa').innerHTML = gpa;
+      }
+      let stuCgpa = 0; 
+      let gpaOFsem1 = 0;
+      let gpaOFsem2 = 0;
+      let gpaOFsem3 = 0;
+      let gpaOFsem4 = 0;
+      let gpaOFsem5 = 0;
+      
+      function cgpacalculator() {
+        gpaOFsem1 = Number(document.querySelector('.sem1').value);
+        gpaOFsem2 = Number(document.querySelector('.sem2').value);
+        gpaOFsem3 = Number(document.querySelector('.sem3').value);
+        gpaOFsem4 = Number(document.querySelector('.sem4').value);
+        gpaOFsem5 = Number(document.querySelector('.sem5').value);
+      
+      
+        stuCgpa =  (gpaOFsem1 + gpaOFsem2 + gpaOFsem3 + gpaOFsem4 + gpaOFsem5 ) / 5 ;
+
+         document.querySelector('.changeCgpa').innerHTML = stuCgpa;
+
+      }
+      
+
+
+     </script>
+
+      
+
+  </body>
+   
+</html>
